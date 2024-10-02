@@ -13,4 +13,5 @@
 }
 *{
   user-select: none;
+  max-width: 100%;
 }

@@ -8,7 +8,8 @@ body {
   background-color: var( --semi-color-bg-0);
 }
 .logo {
-  padding: 1.5em;
+  margin-top: 50%;
+  margin-bottom: 30%;
   will-change: filter;
   transition: filter 300ms;
 }

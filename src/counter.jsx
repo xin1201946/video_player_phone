@@ -1,4 +1,4 @@
-import {Col, Input, Row,Button,SideSheet, Radio,  SplitButtonGroup } from "@douyinfe/semi-ui";
+import {Col, Input, Row,Button,SideSheet } from "@douyinfe/semi-ui";
 import {VideoPlayer} from "./VideoPlayer.jsx";
 import {Settings} from "./Settings.jsx";
 import {IconSetting} from '@douyinfe/semi-icons';
@@ -20,13 +20,13 @@ export function Counter_main (){
             <div>
                 <Row gutter={18}  type="flex" justify="center" alignItems="center">
                     <Col span={15}>
-                        <Input id={'urlInput'} showClear placeholder='输入你的Url'></Input>
+                        <Input id={'urlInput'} showClear placeholder='输入你的Url或者影片名'></Input>
                     </Col>
                     <Col span={6}>
                         <div className="col-content" onClick={openVideoPlayer}><Button>解析</Button></div>
                     </Col>
                     <Button icon={<IconSetting/>} onClick={openSettings}
-                            style={{position:"fixed",float:"right",top:"80%",right:"20px"}}>
+                            style={{position:"fixed",float:"right",top:"85%",right:"20px"}}>
 
                     </Button>
                 </Row>
