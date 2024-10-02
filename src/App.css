@@ -4,7 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
-
+body {
+  color: var(--semi-color-text-0);
+  background-color: var( --semi-color-bg-0);
+}
 .logo {
   padding: 1.5em;
   will-change: filter;
