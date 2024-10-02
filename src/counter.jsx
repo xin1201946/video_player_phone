@@ -18,25 +18,24 @@ export function Counter_main (){
     return (
         <>
             <div>
-                <Row gutter={18}>
+                <Row gutter={18}  type="flex" justify="center" alignItems="center">
                     <Col span={15}>
                         <Input id={'urlInput'} showClear placeholder='输入你的Url'></Input>
                     </Col>
-                    <Col span={4}>
+                    <Col span={6}>
                         <div className="col-content" onClick={openVideoPlayer}><Button>解析</Button></div>
                     </Col>
-                    <Col span={2}>
-                        <div className="col-content"><Button icon={<IconSetting/>} onClick={openSettings}></Button>
-                        </div>
-                    </Col>
+                    <Button icon={<IconSetting/>} onClick={openSettings}
+                            style={{position:"fixed",float:"right",top:"80%",right:"20px"}}>
 
+                    </Button>
                 </Row>
 
-                <SideSheet title="设置" width={window.innerWidth} visible={Settingsvisible} onCancel={openSettings}
+                <SideSheet title="设置" width={"100%"} visible={Settingsvisible} onCancel={openSettings}
                            placement='right' footer={<p style={{textAlign:"center",color:"gray"}}>林间追风 2024</p>}>
                     <Settings></Settings>
                 </SideSheet>
-                <SideSheet title="VideoPlayer" width={window.innerWidth} visible={Videovisible}
+                <SideSheet title="VideoPlayer" width={"100%"} visible={Videovisible}
                            onCancel={openVideoPlayer} placement='right'>
                     <VideoPlayer></VideoPlayer>
                 </SideSheet>

@@ -13,6 +13,7 @@ export function VideoPlayer () {
         <>
             <iframe src={result_path}
                     width="100%"
+                    height="50%"
                     id={'myIframe'}
                     frameBorder={'none'}
                     title="VideoPlayer"
