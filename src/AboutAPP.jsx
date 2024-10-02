@@ -6,10 +6,13 @@ import { FaXTwitter } from "react-icons/fa6";
 import Meta from "@douyinfe/semi-ui/lib/es/card/meta.js";
 import {SoftwareList} from "./SoftwareList.jsx";
 export function AboutAPP(){
+    const appversion = sessionStorage.getItem("appversion");
+    const buildtime = sessionStorage.getItem("build-time");
     const jsonURL =
         'https://lottie.host/c774640d-51ff-4f0e-8e98-180198376d75/4MnbHVayIB.json';
     const data = [
-        { key: '应用版本', value: '1.0' },
+        { key: '应用版本', value: appversion },
+        { key: '构建时间', value: buildtime },
         { key: '基于', value: 'Vite + React' },
     ];
     const [softwarevisible, setSoftwareVisible] = useState(false);

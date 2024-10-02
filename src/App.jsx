@@ -6,6 +6,8 @@ import {Counter_main} from './counter.jsx';
 import {AppTitle} from './appTitle.jsx';
 import './App.css'
 
+sessionStorage.setItem('build-time', document.querySelector('#build-time').content.toString());
+sessionStorage.setItem('appversion', '2.0.4');
 const mql = window.matchMedia('(prefers-color-scheme: dark)');
 
 function matchMode(e) {
