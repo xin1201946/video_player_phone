@@ -1,10 +1,12 @@
-import {Col, Input, Row,Button,SideSheet } from "@douyinfe/semi-ui";
+import {Col, Input, Row,Button,Modal,SideSheet } from "@douyinfe/semi-ui";
 import {VideoPlayer} from "./VideoPlayer.jsx";
 import {Settings} from "./Settings.jsx";
 import {IconSetting} from '@douyinfe/semi-icons';
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useState } from 'react'
+import os from "./UATest.js";
+
 export function Counter_main (){
     const [Settingsvisible, setSettingsVisible] = useState(false);
     const [Videovisible, setVideoVisible] = useState(false);
@@ -15,6 +17,23 @@ export function Counter_main (){
         localStorage.setItem('XLresult',localStorage.getItem('XL')+document.getElementById('urlInput').value)
         setVideoVisible(!Videovisible);
     };
+    const [modalvisible, setmodalVisible] = useState(false);
+    const showmodalDialog = () => {
+        setmodalVisible(true);
+    };
+    const modalhandleOk = () => {
+        setmodalVisible(false);
+        window.location.href='https://pc.video.1201946.xyz/';
+    };
+    const modalhandleCancel = () => {
+        setmodalVisible(false);
+        console.log('Cancel button clicked');
+    };
+    useEffect(() => {
+        if (os.isPc) {
+            showmodalDialog();
+        }
+    }, []);
     return (
         <>
             <div>
@@ -39,6 +58,15 @@ export function Counter_main (){
                            onCancel={openVideoPlayer} placement='right'>
                     <VideoPlayer></VideoPlayer>
                 </SideSheet>
+                <Modal
+                    title="UA检查"
+                    visible={modalvisible}
+                    onOk={modalhandleOk}
+                    onCancel={modalhandleCancel}
+                    closeOnEsc={true}
+                >
+                    检测到你的设备为PC，为了给你带来更好的使用体验，建议你切换到PC模式
+                </Modal>
             </div>
         </>
     )

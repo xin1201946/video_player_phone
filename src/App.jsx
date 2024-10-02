@@ -1,9 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import { useState } from 'react'
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import {Counter_main} from './counter.jsx';
 import './App.css'
+
 const mql = window.matchMedia('(prefers-color-scheme: dark)');
+
 function matchMode(e) {
     const body = document.body;
     if (e.matches) {
