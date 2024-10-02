@@ -3,6 +3,7 @@ import { useState } from 'react'
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import {Counter_main} from './counter.jsx';
+import {AppTitle} from './appTitle.jsx';
 import './App.css'
 
 const mql = window.matchMedia('(prefers-color-scheme: dark)');
@@ -32,7 +33,7 @@ function App() {
 
   return (
       <>
-          <h1 className="logo">VideoPlayer</h1>
+          <AppTitle></AppTitle>
           <Counter_main></Counter_main>
           <br/>
       </>

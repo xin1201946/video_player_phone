@@ -2,11 +2,18 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  --transition-duration: 0.5s;
 }
+
 body {
   color: var(--semi-color-text-0);
   background-color: var( --semi-color-bg-0);
+  transition: color var(--transition-duration), background-color var(--transition-duration);
 }
+body.theme-transition {
+  animation: theme-transition var(--transition-duration) forwards;
+}
+
 .logo {
   margin-top: 50%;
   margin-bottom: 30%;
