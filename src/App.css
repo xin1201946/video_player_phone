@@ -2,8 +2,10 @@
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  height: 100%;
 }
 body {
+
   color: var(--semi-color-text-0);
   background-color: var( --semi-color-bg-0);
 }
